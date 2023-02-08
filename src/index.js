@@ -15,7 +15,7 @@ const template_path = path.join(__dirname, "../templates/views")
 app.use(express.static(staticPath))
 
 app.use(express.json())
-app.use(express.urlencoded({ extended:false }))
+app.use(express.urlencoded({ extended:false}))
 
 
 // app.use(express.static(staticPath));
@@ -127,6 +127,27 @@ app.post('/register' , async (req,res) => {
 });
 
 
+// app.post('/ngologin' , async (req,res) => {
+//     try {
+//         const email = req.body.email
+//         // const id = req.body.id
+//         const password = req.body.password
+
+//         const useremail = await ngoRegister.findOne({email:email} && {id:id});
+//     //    res.send(useremail.password)
+//     //    console.log(useremail);
+//         if(useremail.password1 === password){
+//             res.status(201).render("index")
+//         }
+//         else{
+//             res.send("Invalid credentials")
+//         }
+//     } catch (error) {
+//         res.status(400).send(error)
+//     }
+
+// });
+
 app.post('/ngologin' , async (req,res) => {
     try {
         const email = req.body.email
@@ -147,6 +168,7 @@ app.post('/ngologin' , async (req,res) => {
     }
 
 });
+
 
 app.listen(port , () => {
     console.log("Listening to port 3000 yoo")
