@@ -1,13 +1,13 @@
 const mongoose = require("mongoose")
 
-const userSchema = new mongoose.Schema({
+const ngoSchema = new mongoose.Schema({
     name : {
         type : String,
         required : true,
         unique : true
     },
-    location : {
-        type : String,
+    id : {
+        type : Number,
         required : true
     },
     email : {
@@ -25,7 +25,6 @@ const userSchema = new mongoose.Schema({
     },
 })
 
-const Register = new mongoose.model("reguser", userSchema)
+const ngoRegister = new mongoose.model("regngo", ngoSchema)
 
-
-module.exports = Register
+module.exports = ngoRegister
