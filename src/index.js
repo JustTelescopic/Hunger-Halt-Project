@@ -49,6 +49,15 @@ app.get('/register' , (req,res) => {
 app.get('/reguser' , (req,res) => {
     res.render("reguser")
 });
+app.get('/ngodisplays' , (req,res) => {
+    res.render("ngodisplays")
+});
+app.get('/fooduser' , (req,res) => {
+    res.render("fooduser")
+});
+app.get('/profileuser' , (req,res) => {
+    res.render("profileuser")
+});
 
 //User Registration
 app.post('/reguser' , async (req,res) => {
@@ -158,13 +167,14 @@ app.post('/ngologin' , async (req,res) => {
     //    res.send(useremail.password)
     //    console.log(useremail);
         if(useremail.password1 === password){
-            res.status(201).render("index")
+            res.status(201).render("fooduser")
         }
         else{
-            res.send("Invalid credentials")
+            // res.send("Invalid credentials")
+            alert("Invalid credentials")
         }
     } catch (error) {
-        res.status(400).send(error)
+        res.status(400).send(error) 
     }
 
 });

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hunger Halt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="dfavicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/stylelogin.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <p>+91123456789</p>
+                        </div>
+                        <div class="text">
+                            <i class="fa fa-envelope"></i>
+                            <p>hungerhalt@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="index" class="navbar-brand">Hunger Halt</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="index" class="nav-item nav-link active">Home</a>
+                    <a href="about" class="nav-item nav-link">About</a>
+                    <a href="blog" class="nav-item nav-link">Blog</a>
+                    <a class="nav-item nav-link">Welcome</a>
+
+                    <a href="contact" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+    <div class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img" data-parallax="scroll" data-image-src="img/report.jpg"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header">
+                        <p>Quality Check Report</p>
+                        <h2>Brief</h2>
+                    </div>
+                    <div class="about-tab">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#tab-content-1">Introduction:</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-2">Findings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-3">Recommendations</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="tab-content-1" class="container tab-pane active">
+                                The food quality at the event is a crucial aspect to consider in order to ensure that
+                                attendees have a positive experience and receive healthy and safe food options. This
+                                report will provide a comprehensive overview of the food quality at the event,
+                                highlighting both positive and negative aspects.
+                            </div>
+                            <div id="tab-content-2" class="container tab-pane fade">
+                                During the event, the food quality team conducted a thorough examination of the food
+                                offerings and facilities. The findings show that the majority of the food was
+                                well-prepared, fresh and tasty. The presentation was visually appealing and the food was
+                                well-stocked. However, a few items were observed to have been left out for an extended
+                                period of time and were no longer safe for consumption.
+                            </div>
+                            <div id="tab-content-3" class="container tab-pane fade">
+                                To improve the overall food quality at the event, it is recommended that stricter
+                                guidelines be put in place to ensure that food is not left out for extended periods of
+                                time. It is also suggested that additional measures be taken to monitor the food
+                                preparation and storage processes to guarantee that all food is safe and healthy for
+                                consumption. By implementing these recommendations, attendees will continue to have a
+                                positive experience and receive quality food options at future events.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1> &emsp;Please Go Through The Quality Control Info :</h1>
+
+
+    <section>
+        <div>
+            <canvas id="myChart" height="500" width="1000"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Overall Quality', 'Predicted Shelf Life', 'Preservative Analysis', 'Moisture Content', 'Microbial Test', 'Temperature analysis'],
+                    datasets: [{
+                        label: 'Quality Check Parameters',
+                        data: [12, 19, 3, 5, 2, 7],
+                        backgroundColor: ["red", "blue", "yellow", "purple", "green", "pink"],
+                        borderColor: [
+                            "rgba(255, 99, 132, 1)",
+                            "rgba(54, 162, 235, 1)",
+                            "rgba(255, 206, 86, 1)",
+                            "rgba(75, 192, 192, 1)",
+                            "rgba(153, 102, 255, 1)",
+                            "rgba(255, 159, 64, 1)",
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    layout: {
+                        padding: {
+                            left: 50,
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                        },
+                    },
+                    tooltips: {
+                        enabled: true, // Enable/Disable ToolTip By Default Its True
+                        backgroundColor: "red", // Set Tooltip Background Color
+                        titleFontFamily: "Comic Sans MS", // Set Tooltip Title Font Family
+                        titleFontSize: 30, // Set Tooltip Font Size
+                        titleFontStyle: "bold italic",
+                        titleFontColor: "yellow",
+                        titleAlign: "center",
+                        titleSpacing: 3,
+                        titleMarginBottom: 50,
+                        bodyFontFamily: "Comic Sans MS",
+                        bodyFontSize: 20,
+                        bodyFontStyle: "italic",
+                        bodyFontColor: "black",
+                        bodyAlign: "center",
+                        bodySpacing: 3,
+                    },
+                    title: {
+                        display: true,
+                        text: "Custom Chart Title",
+                        position: "bottom",
+                        fontSize: 25,
+                        fontFamily: "Comic Sans MS",
+                        fontColor: "red",
+                        fontStyle: "bold italic",
+                        padding: 20,
+                        lineHeight: 5,
+                    },
+                    legend: {
+                        display: true,
+                        position: "bottom", // top left bottom right
+                        align: "end", // start end center
+                        labels: {
+                            fontColor: "red",
+                            fontSize: 16,
+                            boxWidth: 20,
+                        },
+                    },
+                    animation: {
+                        duration: 5000,
+                        easing: "easeInOutBounce",
+                    },
+
+                }
+            });
+        </script>
+    </section>
+
+    <h1></h1>
+
+    <h1><u>Quality Report :</u></h1> <br>
+    <div>
+        <h2>Introduction:</h2>
+        <p>
+            This report aims to provide an analysis of the quality control measures taken for surplus cooked food taken
+            from events, including microbial testing, moisture content testing, and chemical testing. The results of
+            these tests have been used to create statistics and graphs, which provide an overview of the quality of the
+            food and a predicted analysis of its consumable time. In addition, this report will determine if there is a
+            need to add preservatives to the food.
+
+
+        </p>
+    </div>
+    <div>
+        <h2>Microbial Testing:
+        </h2>
+        <p>
+            Microbial testing was performed on a sample of surplus cooked food to determine the presence of harmful
+            bacteria, such as E. coli and Salmonella. The results of this testing showed that the food contained a
+            moderate level of harmful bacteria, indicating that it may not be safe for consumption without proper
+            storage and handling. The data was summarized in the following bar graph:
+
+        </p>
+    </div>
+
+
+    <div>
+        <h2>Moisture Content Testing:
+
+        </h2>
+        <p>
+            Moisture content testing was performed to determine the amount of water present in the food, which can
+            affect its shelf life and quality. The results showed that the food had a <strong> content of 16%</strong> , which is
+            higher than the ideal range for this type of food. The data was summarized in the following line graph:
+
+        </p>
+    </div>
+    <div>
+        <h2>Predicted Analysis of Consumable Time:
+
+        </h2>
+        <p>
+
+            Based on the results of the microbial, moisture content, and chemical testing, it is estimated that the
+            surplus cooked food has a limited shelf life and may not be safe for consumption without proper storage and
+            handling. The moderate level of harmful bacteria and the high moisture content suggest that the <strong>should
+            be consumed within 2-3 days</strong>  of the testing.
+
+        </p>
+    </div>
+    <div>
+        <h2>Need for Preservatives:
+
+        </h2>
+        <p>
+
+            Given the results of the microbial and moisture content testing, it is recommended that preservatives be
+            added to the surplus cooked food to extend its shelf life and ensure its safety for consumption. The
+            addition of preservatives will help to prevent the growth of harmful bacteria and reduce the moisture
+            content, making the food safer and more stable.
+
+        </p>
+    </div>
+
+
+
+    <h1> <u>Conclusion :</u></h1><br>
+    <p>Overall, the results of the quality control measures performed on the surplus cooked food indicate that it is
+        not safe for consumption without proper storage and handling. The moderate level of harmful bacteria and high
+        moisture content suggest that the food should be consumed within 2-3 days, and the addition of preservatives is
+        recommended to extend its shelf life and ensure its safety. This report provides valuable information to those
+        who are responsible for distributing and consuming surplus food, and can be used as a reference for future
+        quality control measures.</p>
+
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Our Head Office</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>Panvel, PCE</p>
+                        <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope"></i>hungerhalt@gmail.com</p>
+                        <div class="footer-social">
+                            <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Popular Links</h2>
+                        <a href="">About Us</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Latest Blog</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Useful Links</h2>
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <form>
+                            <input class="form-control" placeholder="Email goes here">
+                            <button class="btn btn-custom">Submit</button>
+                            <label>Don't worry, we don't spam!</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; <a href="#">@HungerHalt.com</a>, All Right Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+        <div class="loader"></div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

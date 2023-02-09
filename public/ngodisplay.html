@@ -59,9 +59,11 @@
     </div>
     <!-- Top Bar End -->
 
+
+
     <!-- Nav Bar Start -->
     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container-fluid">
+        <div class="container">
             <a href="index" class="navbar-brand">Hunger Halt</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -72,7 +74,7 @@
                     <a href="index" class="nav-item nav-link active">Home</a>
                     <a href="about" class="nav-item nav-link">About</a>
                     <a href="blog" class="nav-item nav-link">Blog</a>
-                    <a href="login" class="nav-item nav-link">Login</a>
+                    <a class="nav-item nav-link">Welcome</a>
 
                     <a href="contact" class="nav-item nav-link">Contact</a>
                 </div>
@@ -81,107 +83,148 @@
     </div>
     <!-- Nav Bar End -->
 
-<!-- Carousel Start -->
-<div class="carousel">
-    <div class="container-fluid">
-        <div class="owl-carousel">
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="img/carousel-1.jpg" alt="Image">
+    <div class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img" data-parallax="scroll" data-image-src="img/report.jpg"></div>
                 </div>
-                <div class="carousel-text">
-                    <h1>Let's be kind for children</h1>
-                    <p>
-                        Let's make a difference in a child's life by reducing food waste. Together, we can ensure
-                        no child goes hungry.
-                    </p>
+                <div class="col-lg-6">
+                    <div class="section-header">
+                        <p>Quality Check Report</p>
+                        <h2>Brief</h2>
+                    </div>
+                    <div class="about-tab">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#tab-content-1">Introduction:</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-2">Findings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-3">Recommendations</a>
+                            </li>
+                        </ul>
 
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="img/carousel-2.jpg" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h1>Get Involved with helping hand</h1>
-                    <p>
-                        Let's spread kindness and make a difference in a child's life by reducing food waste and
-                        feeding the hungry
-                    </p>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="img/carousel-3.jpg" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h1>Bringing smiles to millions</h1>
-                    <p>
-                        Join us in our mission to bring smiles to millions by reducing food waste and feeding those
-                        in need.
-                    </p>
-
+                        <div class="tab-content">
+                            <div id="tab-content-1" class="container tab-pane active">
+                                The food quality at the event is a crucial aspect to consider in order to ensure that
+                                attendees have a positive experience and receive healthy and safe food options. This
+                                report will provide a comprehensive overview of the food quality at the event,
+                                highlighting both positive and negative aspects.
+                            </div>
+                            <div id="tab-content-2" class="container tab-pane fade">
+                                During the event, the food quality team conducted a thorough examination of the food
+                                offerings and facilities. The findings show that the majority of the food was
+                                well-prepared, fresh and tasty. The presentation was visually appealing and the food was
+                                well-stocked. However, a few items were observed to have been left out for an extended
+                                period of time and were no longer safe for consumption.
+                            </div>
+                            <div id="tab-content-3" class="container tab-pane fade">
+                                To improve the overall food quality at the event, it is recommended that stricter
+                                guidelines be put in place to ensure that food is not left out for extended periods of
+                                time. It is also suggested that additional measures be taken to monitor the food
+                                preparation and storage processes to guarantee that all food is safe and healthy for
+                                consumption. By implementing these recommendations, attendees will continue to have a
+                                positive experience and receive quality food options at future events.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Carousel End -->
-    <section >
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 text-black">
-      
-              <div>
-                <img class = "size" src="img/logo.jpg" alt="Ok">
-                <!-- <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i> -->
-                <!-- <span class="h1 fw-bold mb-0">Logo</span> -->
-              </div>
-      
-              <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-      
-                <form style="width: 23rem;" method="POST">
-      
-                  <!-- <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3> -->
-      
-                  <div class="form-outline mb-4">
-                    <input name='email' type="email" id="form2Example18" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example18">Email address</label>
-                  </div>
 
-                  <div class="form-outline mb-4">
-                    <input name='id' type="text" id="form2Example18" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example18">NGO ID</label>
-                  </div>
-      
-                  <div class="form-outline mb-4">
-                    <input name='password' type="password" id="form2Example28" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example28">Password</label>
-                  </div>
-      
-                  {{!-- <div class="pt-1 mb-4">
-                    <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
-                  </div> --}}
-                  <div class="pt-1 mb-4">
-                    <input href='fooduser' class="btn btn-info btn-lg btn-block" value="Login" type="submit" />
-                  </div>
-      
-                  <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                  <p>Don't have an account? <a href="register" class="link-info">Register here</a></p>
-      
-                </form>
-      
-              </div>
-      
-            </div>
-            <div class="col-sm-6 px-0 d-none d-sm-block">
-              <img src="img/login.jpg"
-                alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
-            </div>
-          </div>
+    <h1> &emsp;Please Go Through The Chart For Serves Per Item Info :</h1>
+
+
+    <section>
+        <div>
+            <canvas id="myChart" height="500" width="1000"></canvas>
         </div>
-      </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Roti/Chapatis', 'Rice', 'Sweet', 'Curry', 'Salads', 'Dal'],
+                    datasets: [{
+                        label: 'Serves By Items Chart',
+                        data: [12, 19, 3, 5, 2, 7],
+                        backgroundColor: ["red", "blue", "yellow", "purple", "green", "pink"],
+                        borderColor: [
+                            "rgba(255, 99, 132, 1)",
+                            "rgba(54, 162, 235, 1)",
+                            "rgba(255, 206, 86, 1)",
+                            "rgba(75, 192, 192, 1)",
+                            "rgba(153, 102, 255, 1)",
+                            "rgba(255, 159, 64, 1)",
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    layout: {
+                        padding: {
+                            left: 50,
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                        },
+                    },
+                    tooltips: {
+                        enabled: true, // Enable/Disable ToolTip By Default Its True
+                        backgroundColor: "red", // Set Tooltip Background Color
+                        titleFontFamily: "Comic Sans MS", // Set Tooltip Title Font Family
+                        titleFontSize: 30, // Set Tooltip Font Size
+                        titleFontStyle: "bold italic",
+                        titleFontColor: "yellow",
+                        titleAlign: "center",
+                        titleSpacing: 3,
+                        titleMarginBottom: 50,
+                        bodyFontFamily: "Comic Sans MS",
+                        bodyFontSize: 20,
+                        bodyFontStyle: "italic",
+                        bodyFontColor: "black",
+                        bodyAlign: "center",
+                        bodySpacing: 3,
+                    },
+                    title: {
+                        display: true,
+                        text: "Custom Chart Title",
+                        position: "bottom",
+                        fontSize: 25,
+                        fontFamily: "Comic Sans MS",
+                        fontColor: "red",
+                        fontStyle: "bold italic",
+                        padding: 20,
+                        lineHeight: 5,
+                    },
+                    legend: {
+                        display: true,
+                        position: "bottom", // top left bottom right
+                        align: "end", // start end center
+                        labels: {
+                            fontColor: "red",
+                            fontSize: 16,
+                            boxWidth: 20,
+                        },
+                    },
+                    animation: {
+                        duration: 5000,
+                        easing: "easeInOutBounce",
+                    },
+                    
+                }
+            });
+        </script>
+    </section>
 
 
     <!-- Footer Start -->
@@ -238,7 +281,7 @@
                 <div class="col-md-6">
                     <p>&copy; <a href="#">@HungerHalt.com</a>, All Right Reserved.</p>
                 </div>
-                
+
             </div>
         </div>
     </div>
