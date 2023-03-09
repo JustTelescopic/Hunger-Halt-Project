@@ -1,7 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
+  "description": "## This Project is made using ExpressJS and MongoDB .....",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,14 @@
     "hbs": "^4.2.0",
     "mongodb": "^5.0.1",
     "mongoose": "^6.9.1",
-    "nodemon": "^2.0.20"
-  }
+    "nodemon": "^2.0.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustTelescopic/Hunger-Halt-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JustTelescopic/Hunger-Halt-Project/issues"
+  },
+  "homepage": "https://github.com/JustTelescopic/Hunger-Halt-Project#readme"
 }

@@ -8,9 +8,10 @@ const port = process.env.PORT || 3000
 require("./db/conn")
 const Register = require("./models/registers")
 const ngoRegister = require("./models/ngoregisters")
-// console.log(path.join(__dirname, "../public"));
 const staticPath = path.join(__dirname, "../public")
 const template_path = path.join(__dirname, "../templates/views")
+
+
 
 app.use(express.static(staticPath))
 
@@ -18,7 +19,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended:false}))
 
 
-// app.use(express.static(staticPath));
 app.set("view engine", "hbs")
 app.set("views", template_path)
 
@@ -30,11 +30,11 @@ app.get('/index' , (req,res) => {
     res.render("index")
 });
 app.get('/about' , (req,res) => {
-    res.sendFile('about.html', { root: 'public' });});
+    res.sendFile('about.html', { root: '../Hunger-Halt-Project/public' });});
 app.get('/blog' , (req,res) => {
-    res.sendFile('blog.html', { root: 'public' });});
+    res.sendFile('blog.html', { root: '../Hunger-Halt-Project/public' });});
 app.get('/contact' , (req,res) => {
-    res.sendFile('contact.html', { root: 'public' });});
+    res.sendFile('contact.html', { root: '../public' });});
 
 
 app.get('/login' , (req,res) => {
@@ -57,6 +57,22 @@ app.get('/fooduser' , (req,res) => {
 });
 app.get('/profileuser' , (req,res) => {
     res.render("profileuser")
+});
+
+
+// const User = require('../models/user'); // import your user model
+
+app.get('/users/', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id); // find user by ID
+    if (!user) {
+      return res.status(404).send('User not found');
+    }
+    res.send(`Username: ${user.username}`); // send the username of the user
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
 });
 
 //User Registration
@@ -136,26 +152,6 @@ app.post('/register' , async (req,res) => {
 });
 
 
-// app.post('/ngologin' , async (req,res) => {
-//     try {
-//         const email = req.body.email
-//         // const id = req.body.id
-//         const password = req.body.password
-
-//         const useremail = await ngoRegister.findOne({email:email} && {id:id});
-//     //    res.send(useremail.password)
-//     //    console.log(useremail);
-//         if(useremail.password1 === password){
-//             res.status(201).render("index")
-//         }
-//         else{
-//             res.send("Invalid credentials")
-//         }
-//     } catch (error) {
-//         res.status(400).send(error)
-//     }
-
-// });
 
 app.post('/ngologin' , async (req,res) => {
     try {
@@ -164,13 +160,10 @@ app.post('/ngologin' , async (req,res) => {
         const password = req.body.password
 
         const useremail = await ngoRegister.findOne({email:email});
-    //    res.send(useremail.password)
-    //    console.log(useremail);
         if(useremail.password1 === password){
             res.status(201).render("fooduser")
         }
         else{
-            // res.send("Invalid credentials")
             alert("Invalid credentials")
         }
     } catch (error) {
