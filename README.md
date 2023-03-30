@@ -13,8 +13,30 @@ Our goals include providing reliable and sustainable food sources to those in ne
 
 <h2>Project Overview</h2>
 Home Page- 
-[Screenshot]
-{Same pattern follows}
+![Screenshot 2023-03-30 152625](https://user-images.githubusercontent.com/113460779/228802872-d48cc816-367a-4c70-81fa-9301b21283a8.png)
+
+
+
+About Page-
+![Screenshot 2023-03-30 152743](https://user-images.githubusercontent.com/113460779/228800636-de2845d4-5e59-46e9-80fb-579416cacab9.png)
+
+Login Page-
+![Screenshot 2023-03-30 152836](https://user-images.githubusercontent.com/113460779/228800888-33c2460d-4b0a-4bce-882f-56a9b4147872.png)
+
+Registration Page-
+![Screenshot 2023-03-30 152947](https://user-images.githubusercontent.com/113460779/228801171-f96b4b05-132a-4e2f-934d-d640c621d287.png)
+
+NGO Landing Page-
+![Screenshot 2023-03-30 153212](https://user-images.githubusercontent.com/113460779/228801789-e3bbbf9e-23a0-4948-8479-6d3adf2aca80.png)
+
+
+![Screenshot 2023-03-30 153237](https://user-images.githubusercontent.com/113460779/228801890-e7f58ef4-63fa-4cf5-a199-5b347ea99d08.png)
+
+Quality Report Page-
+![Screenshot 2023-03-30 153327](https://user-images.githubusercontent.com/113460779/228802138-2d6db004-fbce-48d5-a804-5eb5b4c6c99f.png)
+![Screenshot 2023-03-30 153409](https://user-images.githubusercontent.com/113460779/228802318-3466fb23-fd4a-4c61-9958-1fc3629fa21f.png)
+![Screenshot 2023-03-30 153441](https://user-images.githubusercontent.com/113460779/228802460-6c82b718-bb9d-4d68-b18d-516d9f554b37.png)
+
 
 <h2>Key features</h2>
 1. A platform for NGOs/Retreate centres dedicated to feeding the hungry and reducing food waste to connect with users who are interested in supporting these causes.
@@ -29,7 +51,25 @@ Home Page-
 
 
 <h2>How to Setup</h2>
-[Remaining]
+Clone the repository using 
+
+```
+git clone <repository-url>
+```
+
+Install dependencies using 
+```
+npm install
+```
+Initialize node package manager
+```
+npm i
+```
+Run the server using the command 
+```
+node src/index.js
+```
+Visit <b>localhost:3000</b> on the browser 
 <h2>About us</h2>
 
 Team Members- 
