@@ -13,7 +13,8 @@ Our goals include providing reliable and sustainable food sources to those in ne
 
 <h2>Project Overview</h2>
 Home Page- 
-![Screenshot 2023-03-30 152625](https://user-images.githubusercontent.com/113460779/228802872-d48cc816-367a-4c70-81fa-9301b21283a8.png)
+
+![Screenshot](./images/ss2.png)
 
 
 
