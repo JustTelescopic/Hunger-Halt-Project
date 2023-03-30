@@ -41,5 +41,3 @@ Team Members-
 We are a group of second-year computer science students from Pillai College of Engineering in New Panvel. Our primary interest lies in developing projects that can help solve real-world problems and contribute to society in meaningful ways.
 
 The idea for the Hunger Halt project arose from our realization that food wastage and the number of people who go hungry every day are closely linked. We wanted to do something to address this issue by creating a platform that would enable people to provide food to those in need and contribute to a good cause in their own way.
-
->>>>>>> e34f4f9b15ad7b74f686d4b94d932fb5e40fc2ce
