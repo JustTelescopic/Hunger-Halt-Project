@@ -2142,13 +2142,31 @@ a:focus {
     /* margin: 6px 0; */
     width: 400px;
     height: -12px;
-    padding-bottom: 5rem;
+    padding-bottom: -2rem;
+    margin-bottom: -4rem;
+    margin-top: -5rem;
+
     padding-left: 4rem;
 }
 
-.hunger {
-    /* padding-top: 10rem; */
+
+
+.footer1{
+
+    position: relative;
+    margin-top: 52rem;
+    padding-top: 90px;
+    background: #20212B;
 }
+
+
+.logoname{
+    padding-bottom: 6rem;
+    margin-bottom: -1rem;
+    padding-left: 6rem;
+    
+}
+
 
 @media (max-width: 767.98px) {
     .footer .copyright p,

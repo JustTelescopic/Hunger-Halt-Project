@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="utf-8">
     <title>Hunger Halt</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
+    <style>
+        #map {
+            height: 22px;
+            width: 100%;
+        }
+    </style>
 
     <!-- Favicon -->
     <link href="dfavicon.ico" rel="icon">
@@ -25,12 +31,14 @@
     <link rel="stylesheet" type="text/css" href="css/CSS/style.css">
     <link rel="stylesheet" href="css/CSS/responsive.css">
     <link rel="stylesheet" href="css/CSS/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/CSS/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/CSS/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <!-- Template Stylesheet -->
-    
+
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -86,219 +94,247 @@
     </div>
     <!-- Nav Bar End -->
 
-<!-- Carousel Start -->
-<div class="carousel">
-    <div class="container-fluid">
-        <div class="owl-carousel">
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="img/carousel-1.jpg" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h1>Let's be kind for children</h1>
-                    <p>
-                        Let's make a difference in a child's life by reducing food waste. Together, we can ensure
-                        no child goes hungry.
-                    </p>
+    <!-- Carousel Start -->
+    <div class="carousel">
+        <div class="container-fluid">
+            <div class="owl-carousel">
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="img/carousel-1.jpg" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Let's be kind for children</h1>
+                        <p>
+                            Let's make a difference in a child's life by reducing food waste. Together, we can ensure
+                            no child goes hungry.
+                        </p>
 
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="img/carousel-2.jpg" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h1>Get Involved with helping hand</h1>
-                    <p>
-                        Let's spread kindness and make a difference in a child's life by reducing food waste and
-                        feeding the hungry
-                    </p>
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="img/carousel-2.jpg" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Get Involved with helping hand</h1>
+                        <p>
+                            Let's spread kindness and make a difference in a child's life by reducing food waste and
+                            feeding the hungry
+                        </p>
 
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="img/carousel-3.jpg" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h1>Bringing smiles to millions</h1>
-                    <p>
-                        Join us in our mission to bring smiles to millions by reducing food waste and feeding those
-                        in need.
-                    </p>
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="img/carousel-3.jpg" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Bringing smiles to millions</h1>
+                        <p>
+                            Join us in our mission to bring smiles to millions by reducing food waste and feeding those
+                            in need.
+                        </p>
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Carousel End -->
-<div class="container">
+    <!-- Carousel End -->
+    {{!-- <div id="map"></div> --}}
+    <div id="map"></div>
+    {{!--
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script> --}}
+    {{!--
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhzJYzBCrAVFT9av3BrWP7vkK8S20ttsI"></script>
+    --}}
+    <h1 style="text-align: center;" class="product_taital">  Locate Food-Surplus Location</h1>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120710.98653379199!2d73.0471374144076!3d19.010098648626794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e869701fb06b%3A0x2be564c38ebddd93!2sLokparishad!5e0!3m2!1sen!2sin!4v1680033142587!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <script>
+        function initMap() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                        zoom: 8
+                    };
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                });
+            }
+        }
+        window.onload = initMap;
+    </script>
+
+    <div class="container1">
         <div class="product_section layout_padding">
             <div class="container">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <h1 class="product_taital">FOOD AVAILABLE !</h1>
-                     <p class="product_text"></p>
-                  </div>
-               </div>
-               <div class="product_section_2 layout_padding">
-                  <div class="row">
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-1.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-2.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-3.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-4.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-5.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-6.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-7.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-8.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                           <h4 class="bursh_text">WE HAVE FOOD</h4>
-                           <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
-                           {{!-- <img src="images/img-9.png" class="image_1"> --}}
-                           <div class="btn_main">
-                              <div class="buy_bt">
-                                 <ul>
-                                    <li class="active"><a href="ngodisplays">REQUEST</a></li>
-                                    
-                                 </ul>
-                              </div>
-                              <h3 class="price_text"></h3>
-                           </div>
-                        </div>
-      </div>
-      {{!-- <div class="pt-1 mb-4">
-                    <button href="ngodisplays" class="btn btn-info btn-lg btn-block" value="Quality Report" type="submit" />
-        </div> --}}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="product_taital">FOOD AVAILABLE !</h1>
+                        <p class="product_text"></p>
+                    </div>
+                </div>
+                <div class="product_section_2 layout_padding">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
 
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-2.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
 
-    <!-- Footer Start -->
-    <div class="footer">
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-3.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-4.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-5.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-6.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-7.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-8.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box">
+                                <h4 class="bursh_text">WE HAVE FOOD</h4>
+                                <p class="lorem_text">3 KG RICE, 5 KG DAL/CURRY,6 KG SABZI , 50 ROTI </p>
+                                {{!-- <img src="images/img-9.png" class="image_1"> --}}
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="ngodisplays">REQUEST</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <h3 class="price_text"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer Start -->
+    <div class="footer1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
@@ -364,10 +400,18 @@
     <div id="loader" class="show">
         <div class="loader"></div>
     </div>
+    {{!-- <!-- Back to top button -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+        <div class="loader"></div>
+    </div> --}}
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -381,7 +425,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="./script.js"></script>
-    
+
 </body>
 
 </html>

@@ -30,12 +30,12 @@ app.get('/index' , (req,res) => {
     res.render("index")
 });
 app.get('/about' , (req,res) => {
-    res.sendFile('about.html', { root: '../Hunger-Halt-Project/public' });});
+    res.sendFile('about.html', { root: 'public' });});
 app.get('/blog' , (req,res) => {
-    res.sendFile('blog.html', { root: '../Hunger-Halt-Project/public' });});
+    res.sendFile('blog.html', { root: 'public' });});
 app.get('/contact' , (req,res) => {
-    res.sendFile('contact.html', { root: '../public' });});
-
+    res.sendFile('contact.html', { root: 'public' });});
+console.log(staticPath);
 
 app.get('/login' , (req,res) => {
     res.render("login")
@@ -112,10 +112,10 @@ app.post('/login' , async (req,res) => {
     //    res.send(useremail.password)
     //    console.log(useremail);
         if(useremail.password1 === password){
-            res.status(201).render("index")
+            res.status(201).render("profileuser")
         }
         else{
-            res.send("Invalid credentials")
+            alert("Invalid Credentials")
         }
     } catch (error) {
         res.status(400).send(error)
