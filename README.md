@@ -9,9 +9,7 @@ Our project aims to address the issues of food waste and hunger by creating a pl
 Our goals include providing reliable and sustainable food sources to those in need, reducing food waste by channeling it to those who can use it, and raising awareness and encouraging action on the issues of food waste and hunger.
 
 <h2>Video</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/00dPKd1gu0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-https://www.youtube.com/watch?v=00dPKd1gu0Q
+Link- https://www.youtube.com/watch?v=00dPKd1gu0Q
 
 <h2>Project Overview</h2>
 Home Page- 
